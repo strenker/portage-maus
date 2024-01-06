@@ -1,0 +1,12 @@
+diff -Naur a/mythweb-30.0/modules/tv/includes/programs.php b/mythweb-30.0/modules/tv/includes/programs.php
+--- a/mythweb-30.0/modules/tv/includes/programs.php	2019-01-03 11:24:29.000000000 +0100
++++ b/mythweb-30.0/modules/tv/includes/programs.php	2020-02-25 18:42:09.074404739 +0100
+@@ -201,6 +201,8 @@
+             }
+         // Add this program to the channel hash, etc.
+             $these_programs[]                          =& $program;
++        // Creating default object from empty value php warning
++            $channel_hash[$data['chanid']] = new stdClass();
+             $channel_hash[$data['chanid']]->programs[] =& $program;
+         // Cleanup
+             unset($program);

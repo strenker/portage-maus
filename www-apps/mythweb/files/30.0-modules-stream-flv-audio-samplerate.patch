@@ -1,0 +1,12 @@
+diff -Naur a/mythweb-30.0/modules/stream/stream_flv.pl b/mythweb-30.0/modules/stream/stream_flv.pl
+--- a/mythweb-30.0/modules/stream/stream_flv.pl	2017-12-14 17:12:51.000000000 +0100
++++ b/mythweb-30.0/modules/stream/stream_flv.pl	2018-11-11 20:33:19.485881018 +0100
+@@ -124,7 +124,7 @@
+                         .' -deinterlace'
+                         .' -async 2'
+                         .' -ac 2'
+-                        .' -ar 11025'
++                        .' -ar 44100'
+                         .' -ab '.shell_escape("${abitrate}k")
+                         .' -b '.shell_escape("${vbitrate}k")
+                         .' /dev/stdout 2>/dev/null |';

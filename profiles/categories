@@ -1,0 +1,8 @@
+cross-arm-unknown-linux-gnu
+cross-arm-hardfloat-linux-gnueabi
+cross-armv7j-hardfloat-linux-gnueabi
+cross-armv7a-hardfloat-linux-gnueabi
+cross-armv8a-hardfloat-linux-gnueabi
+cross-arm-unknown-linux-gnueabi
+cross-armv7a-unknown-linux-gnueabihf
+cross-armv7a-linaro-linux-gnueabihf

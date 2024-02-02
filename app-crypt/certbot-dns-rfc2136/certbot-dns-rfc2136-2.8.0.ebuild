@@ -12,7 +12,7 @@ if [[ ${PV} == 9999* ]]; then
 	S=${WORKDIR}/${P}/${PN}
 else
 	SRC_URI="https://github.com/${PN%-dns-rfc2136}/${PN%-dns-rfc2136}/archive/v${PV}.tar.gz -> ${PN%-dns-rfc2136}-${PV}.tar.gz"
-	KEYWORDS="amd64 ~arm64 x86"
+	KEYWORDS="amd64 arm64 x86"
 	S=${WORKDIR}/${PN%-dns-rfc2136}-${PV}/${PN}
 fi
 

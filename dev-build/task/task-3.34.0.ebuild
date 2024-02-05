@@ -12,7 +12,7 @@ SRC_URI+=" https://tekener.trenker.xyz/distfiles/task-${PV}-deps.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"

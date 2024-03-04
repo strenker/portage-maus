@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
-DEPEND=""
+DEPEND="!!net-misc/ipcalc"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 

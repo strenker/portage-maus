@@ -25,7 +25,7 @@ RDEPEND="
 "
 BDEPEND="
 	>=dev-lang/go-1.20.7:=
-	<dev-lang/go-1.22.0:=
+	<dev-lang/go-1.22.0
 	>=net-libs/nodejs-16.0.0:=
 	<=net-libs/nodejs-21.0.0:=
 	>=sys-apps/yarn-1.22.19:=

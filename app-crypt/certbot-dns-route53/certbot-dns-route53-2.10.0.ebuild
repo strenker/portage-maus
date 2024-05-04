@@ -11,14 +11,14 @@ if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
 	S=${WORKDIR}/${P}/${PN}
 else
-	SRC_URI="https://github.com/${PN%-dns-rfc2136}/${PN%-dns-rfc2136}/archive/v${PV}.tar.gz -> ${PN%-dns-rfc2136}-${PV}.tar.gz"
+	SRC_URI="https://github.com/${PN%-dns-route53}/${PN%-dns-route53}/archive/v${PV}.tar.gz -> ${PN%-dns-route53}-${PV}.tar.gz"
 	KEYWORDS="amd64 ~arm64 x86"
-	S=${WORKDIR}/${PN%-dns-rfc2136}-${PV}/${PN}
+	S=${WORKDIR}/${PN%-dns-route53}-${PV}/${PN}
 fi
 
 inherit distutils-r1
 
-DESCRIPTION="Apache plugin for certbot (Let's Encrypt Client)"
+DESCRIPTION="Amazon AWS Route 53 plugin for certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
 
 LICENSE="Apache-2.0"

@@ -11,7 +11,7 @@ inherit distutils-r1
 PARENT_PN="${PN%-dns-route53}"
 PARENT_P="${PARENT_PN}-${PV}"
 
-DESCRIPTION="RFC 2136 DNS Authenticator plugin for Certbot (Let’s Encrypt client)"
+DESCRIPTION="Amazon AWS Route 53 plugin for certbot (Let's Encrypt Client)"
 HOMEPAGE="
 	https://github.com/certbot/certbot
 	https://letsencrypt.org/

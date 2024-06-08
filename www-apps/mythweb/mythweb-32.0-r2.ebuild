@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=8
 
-inherit eutils webapp
+inherit desktop edos2unix estack multilib preserve-libs strip-linguas toolchain-funcs vcs-clean wrapper webapp
 
 #BACKPORTS="e094a020179aba2d955a21b8fd067231a87e3334"
 #BACKPORTS="d90538cecfdadc0343014400e209d7612e7b485e"
@@ -22,9 +22,14 @@ SRC_URI="https://www.mythtv.org/download/mythweb/32 -> mythweb-${MY_PV}.tar.gz"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND="dev-lang/php:=[json,mysql,session,posix]
-	virtual/httpd-php:=
-	dev-perl/DBI
+#RDEPEND="dev-lang/php[json,mysql,session,posix]
+#	virtual/httpd-php
+#	dev-perl/DBI
+#	dev-perl/DBD-mysql
+#	dev-perl/HTTP-Date
+#	dev-perl/Net-UPnP"
+
+RDEPEND="dev-perl/DBI
 	dev-perl/DBD-mysql
 	dev-perl/HTTP-Date
 	dev-perl/Net-UPnP"

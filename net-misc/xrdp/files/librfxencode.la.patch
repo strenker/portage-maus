@@ -1,0 +1,13 @@
+diff '--color=auto' -Naur a/xrdp-0.9.25.1/xrdp/Makefile.am b/xrdp-0.9.25.1/xrdp/Makefile.am
+--- a/xrdp-0.9.25.1/xrdp/Makefile.am	2024-03-13 10:59:35.000000000 +0100
++++ b/xrdp-0.9.25.1/xrdp/Makefile.am	2024-06-15 12:13:32.926222134 +0200
+@@ -21,7 +21,8 @@
+ if XRDP_RFXCODEC
+ AM_CPPFLAGS += -DXRDP_RFXCODEC
+ AM_CPPFLAGS += -I$(top_srcdir)/librfxcodec/include
+-XRDP_EXTRA_LIBS += $(top_builddir)/librfxcodec/src/.libs/librfxencode.a
++#XRDP_EXTRA_LIBS += $(top_builddir)/librfxcodec/src/.libs/librfxencode.a
++XRDP_EXTRA_LIBS += $(top_builddir)/librfxcodec/src/.libs/librfxencode.la
+ endif
+ 
+ if XRDP_PIXMAN

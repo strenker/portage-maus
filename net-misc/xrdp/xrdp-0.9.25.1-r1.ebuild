@@ -39,6 +39,9 @@ DEPEND="${RDEPEND}
 #     )"
 
 src_prepare() {
+	# Patches
+	epatch files/librfxencode.la
+
 	# don't let USE=debug adjust CFLAGS
 	sed -i -e 's/-g -O0//' configure.ac || die
 	# disallow root login by default

@@ -1,6 +1,6 @@
 diff '--color=auto' -Naur a/xrdp-0.9.25.1/xrdp/Makefile.am b/xrdp-0.9.25.1/xrdp/Makefile.am
 --- a/xrdp-0.9.25.1/xrdp/Makefile.am	2024-03-13 10:59:35.000000000 +0100
-+++ b/xrdp-0.9.25.1/xrdp/Makefile.am	2024-06-15 12:13:32.926222134 +0200
++++ b/xrdp-0.9.25.1/xrdp/Makefile.am	2024-06-15 12:28:56.796089419 +0200
 @@ -21,7 +21,8 @@
  if XRDP_RFXCODEC
  AM_CPPFLAGS += -DXRDP_RFXCODEC
@@ -11,3 +11,13 @@ diff '--color=auto' -Naur a/xrdp-0.9.25.1/xrdp/Makefile.am b/xrdp-0.9.25.1/xrdp/
  endif
  
  if XRDP_PIXMAN
+@@ -33,7 +34,8 @@
+ if XRDP_PAINTER
+ AM_CPPFLAGS += -DXRDP_PAINTER
+ AM_CPPFLAGS += -I$(top_srcdir)/libpainter/include
+-XRDP_EXTRA_LIBS += $(top_builddir)/libpainter/src/.libs/libpainter.a
++#XRDP_EXTRA_LIBS += $(top_builddir)/libpainter/src/.libs/libpainter.a
++XRDP_EXTRA_LIBS += $(top_builddir)/libpainter/src/.libs/libpainter.la
+ endif
+ 
+ sbin_PROGRAMS = \

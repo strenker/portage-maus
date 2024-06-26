@@ -12,7 +12,7 @@ SRC_URI="https://github.com/grafana/grafana/archive/refs/tags/v${PV}.tar.gz"
 
 LICENSE="AGPL-v3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="~amd64 -arm64"
 RESTRICT="mirror network-sandbox"
 
 DEPEND="

@@ -20,7 +20,7 @@ LICENSE="GPL-2"
 #SRC_URI="https://github.com/MythTV/mythweb/archive/${BACKPORTS}/v${PV}.tar.gz -> mythweb-${MY_PV}.tar.gz"
 SRC_URI="https://www.mythtv.org/download/mythweb/32 -> mythweb-${MY_PV}.tar.gz"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm64 ~ppc ~x86"
 
 #RDEPEND="dev-lang/php[json,mysql,session,posix]
 #	virtual/httpd-php

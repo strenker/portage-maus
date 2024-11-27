@@ -29,7 +29,7 @@ IUSE=""
 
 DEPEND="
 	sys-libs/zlib
-	=media-tv/kodi-20*
+	=media-tv/kodi-21*
 	"
 RDEPEND="
 	${DEPEND}

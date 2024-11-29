@@ -17,8 +17,7 @@ case ${PV} in
 	;;
 *)
 	CODENAME="Omega"
-	#KEYWORDS="~amd64 ~arm64 ~x86"
-	KEYWORDS=""
+	KEYWORDS="~amd64 ~arm64 ~x86"
 	SRC_URI="https://github.com/janbar/pvr.mythtv/archive/${PV}-${CODENAME}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/pvr.mythtv-${PV}-${CODENAME}"
 	;;

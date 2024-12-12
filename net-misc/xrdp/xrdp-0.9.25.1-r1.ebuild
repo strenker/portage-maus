@@ -120,6 +120,8 @@ pkg_preinst() {
 		cp {"${EROOT}","${ED}"}/etc/xrdp/rsakeys.ini || die
 	else
 		einfo "Running xrdp-keygen to generate new rsakeys.ini ..."
+		einfo "ED=${ED}"
+		einfo "$(ls -la "${ED}"/usr/bin/xrdp-keygen)"
 		"${ED}"/usr/bin/xrdp-keygen xrdp "${ED}"/etc/xrdp/rsakeys.ini \
 			|| die "xrdp-keygen failed to generate RSA keys"
 	fi

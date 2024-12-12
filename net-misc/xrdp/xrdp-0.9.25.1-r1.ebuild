@@ -12,8 +12,7 @@ SRC_URI="https://github.com/neutrinolabs/xrdp/releases/download/v${PV}/${P}.tar.
 
 LICENSE="Apache-2.0"
 SLOT="0"
-#KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
 RESTRICT="mirror"
 IUSE="debug fuse +ipv6 kerberos jpeg -neutrinordp pam +pulseaudio systemd +vsock +xorg -xrdpvr"
 
@@ -121,6 +120,7 @@ pkg_preinst() {
 		cp {"${EROOT}","${ED}"}/etc/xrdp/rsakeys.ini || die
 	else
 		einfo "Running xrdp-keygen to generate new rsakeys.ini ..."
+		einfo "S=${S}"
 		"${S}"/keygen/xrdp-keygen xrdp "${ED}"/etc/xrdp/rsakeys.ini \
 			|| die "xrdp-keygen failed to generate RSA keys"
 	fi

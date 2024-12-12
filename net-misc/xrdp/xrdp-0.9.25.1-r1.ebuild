@@ -118,16 +118,22 @@ pkg_preinst() {
 	# or generate new keys (but don't include them in binpkg!)
 	if [[ -f ${EROOT}/etc/xrdp/rsakeys.ini ]]; then
 		cp {"${EROOT}","${ED}"}/etc/xrdp/rsakeys.ini || die
-	else
-		einfo "Running xrdp-keygen to generate new rsakeys.ini ..."
-		einfo "ED=${ED}"
-		einfo "$(ls -la "${ED}"/usr/bin/xrdp-keygen)"
-		"${ED}"/usr/bin/xrdp-keygen xrdp "${ED}"/etc/xrdp/rsakeys.ini \
-			|| die "xrdp-keygen failed to generate RSA keys"
+#	else
+#		einfo "Running xrdp-keygen to generate new rsakeys.ini ..."
+#		einfo "ED=${ED}"
+#		einfo "$(ls -la "${ED}"/usr/bin/xrdp-keygen)"
+#		"${ED}"/usr/bin/xrdp-keygen xrdp "${ED}"/etc/xrdp/rsakeys.ini \
+#			|| die "xrdp-keygen failed to generate RSA keys"
 	fi
 }
 
 pkg_postinst() {
+	if [[ ! -f ${EROOT}/etc/xrdp/rsakeys.ini ]]; then
+		einfo "Running xrdp-keygen to generate new rsakeys.ini ..."
+		"${EROOT}"/usr/bin/xrdp-keygen xrdp "${EROOT}"/etc/xrdp/rsakeys.ini \
+			|| die "xrdp-keygen failed to generate RSA keys"
+	fi
+
 	# check for use of bundled rsakeys.ini (installed by default upstream)
 	if [[ $(cksum "${EROOT}"/etc/xrdp/rsakeys.ini) == '2935297193 1019 '* ]]
 	then

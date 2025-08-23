@@ -25,16 +25,17 @@ RDEPEND="
 	app-arch/libarchive
 	dev-qt/qtconcurrent
 	dev-qt/qtcore
-	dev-qt/qtdeclarative:6
-	dev-qt/qtgui:6
-	dev-qt/qtquickcontrols2:6
-	dev-qt/qtwidgets:6
-	dev-qt/qtxml:6
+	dev-qt/qtdeclarative
+	dev-qt/qtgui
+	dev-qt/qtquickcontrols2
+	dev-qt/qtwidgets
+	dev-qt/qtxml
 	net-misc/curl
-	sys-fs/udisks:2
-	<=app-arch/xz-utils-5.8.1
-	<=app-arch/zstd-1.5.7
-	<=net-libs/nghttp2-1.66.0
+	sys-fs/udisks
+	app-arch/xz-utils
+	app-arch/zstd
+	net-libs/nghttp2
+	app-arch/libarchive
 "
 DEPEND="
 	${RDEPEND}

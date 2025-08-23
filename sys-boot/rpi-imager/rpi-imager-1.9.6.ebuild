@@ -23,7 +23,7 @@ IUSE="debug"
 
 RDEPEND="
 	app-arch/libarchive
-	dev-qt/qtconcurrent:6
+	dev-qt/qtconcurrent
 	dev-qt/qtcore:6
 	dev-qt/qtdeclarative:6
 	dev-qt/qtgui:6

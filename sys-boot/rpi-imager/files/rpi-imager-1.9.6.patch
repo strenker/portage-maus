@@ -1,6 +1,6 @@
 diff '--color=auto' -Naur a/rpi-imager-1.9.6/src/CMakeLists.txt b/rpi-imager-1.9.6/src/CMakeLists.txt
 --- rpi-imager-1.9.6/src/CMakeLists.txt	2025-07-21 11:57:33.000000000 +0200
-+++ rpi-imager-1.9.6/src/CMakeLists.txt	2025-08-23 21:50:11.534859361 +0200
++++ rpi-imager-1.9.6/src/CMakeLists.txt	2025-08-23 21:55:32.320789178 +0200
 @@ -1,7 +1,7 @@
  # SPDX-License-Identifier: Apache-2.0
  # Copyright (C) 2020-2025 Raspberry Pi Ltd
@@ -462,8 +462,3 @@ diff '--color=auto' -Naur a/rpi-imager-1.9.6/src/CMakeLists.txt b/rpi-imager-1.9
  
  # Adding headers explicity so they are displayed in Qt Creator
  set(HEADERS config.h imagewriter.h networkaccessmanagerfactory.h nan.h drivelistitem.h drivelistmodel.h drivelistmodelpollthread.h driveformatthread.h powersaveblocker.h cli.h
-@@ -1029,3 +630,4 @@
- add_dependencies(${PROJECT_NAME} ZLIB::ZLIB)
- include_directories(${CURL_INCLUDE_DIR} ${LibArchive_INCLUDE_DIR} ${LIBLZMA_INCLUDE_DIRS} ${LIBDRM_INCLUDE_DIRS} ${ZLIB_INCLUDE_DIRS} ${ZSTD_INCLUDE_DIR})
- target_link_libraries(${PROJECT_NAME} PRIVATE ${QT}::Core ${QT}::Quick ${QT}::Svg ${CURL_LIBRARIES} ${LibArchive_LIBRARIES} ${ZSTD_LIBRARIES} ${LIBLZMA_LIBRARIES} ZLIB::ZLIB ${LIBDRM_LIBRARIES} ${ATOMIC_LIBRARY} ${EXTRALIBS})
-+#target_link_libraries(${PROJECT_NAME} PRIVATE ${QT}::Core ${QT}::Quick ${QT}::Svg ${CURL_LIBRARIES} ${LibArchive_LIBRARIES} ${ZSTD_LIBRARIES} ${LIBLZMA_LIBRARIES} ${LIBDRM_LIBRARIES} ${ATOMIC_LIBRARY} ${EXTRALIBS})

@@ -49,6 +49,7 @@ DEPEND="
 	>=sys-libs/talloc-2.0.7
 	>=sys-libs/tdb-1.2.9
 	>=sys-libs/tevent-0.9.16
+	>=net-fs/samba-4.22.3[winbind]
 	virtual/libintl
 	acl? ( net-fs/cifs-utils[acl] )
 	netlink? ( dev-libs/libnl:3 )
@@ -63,7 +64,7 @@ DEPEND="
 			')
 		)
 	)
-	samba? ( >=net-fs/samba-4.10.2[winbind] )
+	>=net-fs/samba-4.22.3[winbind]
 	selinux? (
 		>=sys-libs/libselinux-2.1.9
 		>=sys-libs/libsemanage-2.1

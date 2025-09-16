@@ -60,7 +60,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-1.1.31-fix_PKGCONFIGDIR-when-python-disabled.patch
 	"${FILESDIR}"/${PN}-2.4.2-skip-32bit-time_t-tests.patch
 	"${FILESDIR}"/${PN}-2.5.2-skip-waf-tevent-check.patch
-	"${FILESDIR}"/samba-4.22.3.patch"
+	"${FILESDIR}"/samba-4.22.3.patch
 )
 
 pkg_setup() {
